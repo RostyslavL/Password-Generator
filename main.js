@@ -56,3 +56,20 @@ function generatePassword (lower, upper, number, symbol, length){
     return finalPassword
 }
 
+clipboardElement.addEventListener('click', () =>{
+    const textArea = document.createElement('textarea')
+    const password = resultElement.innerText
+
+    !password  
+        ? null 
+        : 
+        (   
+        textArea.value = password ,
+        document.body.appendChild(textArea),
+        textArea.select(),
+        document.execCommand('copy'),
+        textArea.remove,
+        alert(`Your Password is copied to clipboard`)
+    )
+   
+})  
